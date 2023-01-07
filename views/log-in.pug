@@ -1,0 +1,12 @@
+include template
+
+h1 Log in!
+
+div(class='form')
+  form(method="post")
+      div(class='wrapper')
+        label(for="username" class='main-lbl') Username:
+        input(type="text", name="username" class='main-input')
+        label(for="password" class='main-lbl') Password:
+        input(type="password", name="password" class='main-input') 
+        button(type="submit" class='main-btn') Log in

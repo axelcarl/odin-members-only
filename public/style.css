@@ -1,0 +1,100 @@
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  height: 40px;
+  background-color: black;
+  display: flex;
+  gap: 20px;
+  justify-content: right;
+}
+
+.header a {
+  all: unset;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+  margin-right: 20px;;
+}
+
+.header .member-tag {
+  position: absolute;
+  left: 0;
+}
+
+.header p {
+  all: unset;
+  color: rgb(161, 159, 159);
+  font-size: 20px;
+  margin: 10px;
+  margin-right: 20px;;
+}
+
+.header a:hover, p:hover {
+  color: rgb(214, 73, 108);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main-input {
+  border-radius: 8px;
+  border: 3px solid rgb(41, 40, 40);
+  width: 20rem;
+  height: 3.5rem;
+}
+
+.main-btn {
+  border-radius: 8px;
+  width: 5rem;
+  height: 2rem;
+  background-color: white;
+}
+
+.main-btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+}
+
+.post {
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 40vw;
+  height: 20%;
+  font-size: 22px;
+}
+
+.post-member {
+  color: rgb(214, 73, 108);
+  font-weight: bold;
+  font-size: medium;
+}
+
+.main-lbl {
+  font-size: x-large;
+}
+
+.form {
+  margin-top: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

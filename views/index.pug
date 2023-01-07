@@ -1,0 +1,26 @@
+include template
+
+div(class='wrapper')
+  div(class='wrapper')
+    if currentUser
+      div(class='form')
+        h1 Whats on your mind?
+        form(action="/posts", method="post")
+          div(class='wrapper')
+            input(class='main-input' type="text", name="message")
+            button(type="submit" class='main-btn') Post
+
+  div(class='wrapper')
+  h1 Latest Posts:
+    if posts
+      div(class='posts') 
+        for post in posts 
+          div(class='post')
+            div= post.message
+            if currentUser
+              if currentUser.member
+                div(class='post-member')= post.postedBy.username
+              else 
+                div(class='post-member') anonymous
+            else
+              div(class='post-member') anonymous

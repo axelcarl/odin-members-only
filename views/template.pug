@@ -1,0 +1,16 @@
+html
+  head
+    title My App
+    link(rel='stylesheet', href='./style.css')
+  body
+  div(class='header')
+    if currentUser
+      if !currentUser.member
+        a(href="/member" class="member-tag") Member status
+      p=currentUser.username
+      a(href="/log-out") Log out
+    else
+      a(href="/log-in") Log in
+      a(href="/sign-up") Sign up
+    
+    
