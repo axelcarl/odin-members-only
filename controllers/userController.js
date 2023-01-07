@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const Post = require('../models/post');
 const passport = require("passport");
+const bcrypt = require('bcryptjs');
 
 exports.get = async (req, res) => {
   let users;
@@ -23,9 +24,10 @@ exports.signupForm = (req, res) => {
 
 exports.signup = async (req, res) => {
   try {
+    const pass = await bcrypt.hash(req.body.password, 10);
     const user = new User({
       username: req.body.username,
-      password: req.body.password,
+      password: pass,
       member: false
     });
     await user.save();
